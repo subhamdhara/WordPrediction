@@ -4,15 +4,15 @@ import time
 words = list({'rainbow', 'computer', 'science', 'programming',
               'python', 'mathematics', 'player', 'condition',
               'reverse', 'water', 'board', 'food', "bench", "chair", "table",
-              "spell", "java", "ruby", "rugby", "football", "oak"})
+              "spell", "java", "ruby", "rugby", "football", "oak",
+              "rain", "pain"})
 
 r = random.choice(words)
 
 print("Guess the characters")
 for _ in range(len(r)):
     print("-")
-    time.sleep(0.1)
-
+    time.sleep(0.30)
 userW = []
 
 for i in range(len(r)):
@@ -30,6 +30,6 @@ for i in range(len(r)):
         try:
             print(userW[i])
         except IndexError:
-            print("_")
+            print("-")
 else:
     print("You got it correct, it's", r)
